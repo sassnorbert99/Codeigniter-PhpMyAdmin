@@ -62,7 +62,8 @@
 		}
 
 		public function update(){
-			echo 'submitted';
+			$this->post_model->update_post();
+			redirect('posts');
 		}
 	}
 
