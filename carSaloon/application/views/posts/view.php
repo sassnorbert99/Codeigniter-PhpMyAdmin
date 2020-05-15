@@ -17,8 +17,10 @@
 <h3>Comments</h3>
 <?php if($comments) : ?>
 	<?php foreach($comments as $comment) : ?>
+		<div class="well">
 		<h5><?php echo $comment['body']; ?> [by <strong><?php echo $comment['name']; ?></strong>]</h5>
 	<?php endforeach; ?>
+	</div>
 <?php else : ?>
 	<p>No Comments Yet</p>
 <?php endif; ?>
