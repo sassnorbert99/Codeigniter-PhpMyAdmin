@@ -11,6 +11,12 @@
 		}
 
 		public function create(){
+
+			if (!$this->session->userdata('logged_in')) {
+				# code...
+				redirect('users/login');
+			}
+
 			$data['title'] = 'Create Category';
 
 			$this->form_validation->set_rules('name', 'Name', 'required');
@@ -30,6 +36,8 @@
 		}
 
 		public function posts($id){
+
+
 			$data['title'] = $this->category_model->get_category($id)->name;
 
 
