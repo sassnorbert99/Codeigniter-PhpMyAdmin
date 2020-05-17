@@ -40,8 +40,26 @@
 				$this->load->view('templates/footer');
 			}else{
 				
-				$this->session->set_flashdata('user_loggedin', 'You are now logged in');
-				redirect('posts');
+				$username = $this->input->post('username');
+
+				$password = md5($this->input->post('password'));
+
+				//meg kell jegyezni az adott usert, ezért elmentem
+				$user_id = $this->user_model->login($username, $password);
+
+				if ($user_id) {
+					# code...
+					die('SUCCESS');
+
+					$this->session->set_flashdata('user_loggedin', 'You are now logged in');
+					redirect('posts');
+
+				}else{
+					$this->session->set_flashdata('login_failed', 'Incorrect username or password');
+					redirect('users/login');
+				}
+
+				
 			}
 		}
 
