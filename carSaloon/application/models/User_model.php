@@ -39,6 +39,7 @@
 		}
 
 
+
 		public function check_email_exists($email){
 			$query = $this->db->get_where('users', array('email' => $email));
 
@@ -49,4 +50,19 @@
 				return false;
 			}
 		}
+
+
+//--------------------------------------------------------------
+/**
+		public function check_admin(){
+			$query = $this->db->get_where('users', array('admin' => '1'));
+			if (empty($query->row_array())) {
+				# code...
+				return true;
+			}else{
+				return false;
+			}
+		}
+		*/
+
 	}

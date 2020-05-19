@@ -17,6 +17,8 @@
 				redirect('users/login');
 			}
 
+			
+
 			$data['title'] = 'Create Category';
 
 			$this->form_validation->set_rules('name', 'Name', 'required');
