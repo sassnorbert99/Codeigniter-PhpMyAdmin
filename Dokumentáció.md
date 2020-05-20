@@ -40,7 +40,8 @@
       <li>-H Content-Type:application/json   </li>
       <li>-X POST   </li>
       <li>-d '{"login":"test1", "password":"asdasd"}'  </li> 
-      <li>-d '{"login":"sassnorbert99", "password":"asdasd"}'  </li> 
+      <li>-d '{"login":"sassnorbert99", "password":"asdasd"}'  </li>
+ 	<li>-d '{"login":"test2", "password":"asdasd"}'  </li>
       <li>-v https://localhost:8888/users/login  </li>
   </p></td> 
   </tr>  
@@ -418,6 +419,42 @@
   <tr>
     <td><p align="center">Response Error</p></td>
     <td><p >success: 0, message: You are not logged in!</p></td>
+  </tr>  
+  <tr>
+    
+  </tr>  
+</table>
+
+
+
+<table>
+  <thead>
+   <tr>
+    <td><b><p align="center">Service name</p></b></td>
+    <td colspan=2><b><p align="center">checkAdmin</p></b></td>
+  </tr>
+  </thead>
+  <tr> 
+    <td><p align="center">Description</p></td>
+	  <td><p>check if the current user is admin</p></p></td>
+  </tr>
+    <td><p align="center">Method</p></td>
+    <td><p>get</p></td>
+  </tr>
+  <tr>
+    <td><p align="center">Path</p></td>
+    <td><p>view/posts/index</p></td>
+  </tr>
+  <td><p> Request Body:    
+       <li> "admin" : tinyint value, that can takes 0: user and 1: superadmin values    </li>
+  </p></td>
+  <tr>
+    <td><p align="center">Response OK</p></td>
+    <td><p>success : 1,	data : results</p></td>
+  </tr>
+  <tr>
+    <td><p align="center">Response Error</p></td>
+    <td><p >success: 0</p></td>
   </tr>  
   <tr>
     
