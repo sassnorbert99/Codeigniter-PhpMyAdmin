@@ -72,6 +72,19 @@
 		}
 
 
+
+    		
+    		public function get_list()
+    		{
+        		$this->db->select('*'); 
+       		 	$this->db->from('users');         
+        		$this->db->order_by('id','ASC'); 
+        		$query = $this->db->get(); 
+        		$result = $query->result();  
+        		return $result;
+    		}
+
+
 //--------------------------------------------------------------
 /**
 		public function check_admin(){

@@ -66,6 +66,11 @@
         ?>
 
 
+
+
+
+
+
 <form class="well" align="center"  action="" method="post" name="uploadCsv" enctype="multipart/form-data">
     <h2 align="center">Import</h2>
      <label> Choose CSV File </label>
@@ -75,6 +80,69 @@
     <input type="submit" name="import" class="btn btn-success btn-xs" value="Import" />
    </form>
 
+
+
+<?php  
+ $connect = mysqli_connect("localhost", "root", "root", "luxurycar");  
+ $query ="SELECT * FROM posts ORDER BY id desc";  
+ $result = mysqli_query($connect, $query); 
+ ?>
+
+
+
+
+
+
+
+<br /><br />  
+           <div class="container" style="width:900px;">  
+                <h2 align="center">Export</h2>  
+                <h3 align="center">Luxury Cars</h3>                 
+                <br />  
+                
+                <form method="post"action="<?php echo base_url(); ?>exports/export" align="center">               
+                    <input class="btn btn-success btn-xs" type="submit" name="export" value="Export to CSV" /> 
+                </form>
+                <!--
+
+                <br />  
+                <div class="table-responsive" id="posts">  
+                     <table class="table table-bordered">  
+                          <tr>  
+                               <th width="5%">ID</th>  
+                               <th width="25%">title</th>  
+                               <th width="35%">slug</th>  
+                               <th width="100%">body</th>  
+                               <th width="10%">images</th>    
+                          </tr>  
+                     <?php  
+                     while($row = mysqli_fetch_array($result))  
+                     {  
+                     ?>  
+                          <tr>  
+                               <td><?php echo $row["id"]; ?></td>  
+                               <td><?php echo $row["title"]; ?></td>  
+                               <td><?php echo $row["slug"]; ?></td>  
+                               <td><?php echo $row["body"]; ?></td>  
+                               <td><?php echo $row["post_image"]; ?></td>    
+                          </tr>  
+                     <?php       
+                     }  
+                     ?>  
+
+                     </table>  
+                </div> 
+                -->
+           </div>
+
+
+
+
+           
+
+
+
+ 
 
 
 

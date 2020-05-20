@@ -1,5 +1,13 @@
 <?php
 	class Users extends CI_Controller{
+
+		public function __construct(){
+        		parent::__construct();
+        		$this->load->model('User_model');
+    		}
+
+
+
 		public function register(){
 			$data['title'] = 'Sign Up';
 
@@ -114,6 +122,19 @@
 				return false;
 			}
 		}
+
+
+
+    		
+    		public function list(){    
+       		$records = $this->User_model->get_list(); 
+       		$view_params = 
+       		[
+           		'users'  =>  $records
+       		];
+       		$this->load->helper('url'); 
+       		$this->load->view('users/list', $view_params);
+    		}
 
 
 		

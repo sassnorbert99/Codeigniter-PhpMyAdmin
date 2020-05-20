@@ -20,6 +20,14 @@
 				<li><a href="<?php echo base_url(); ?>categories">Categories</a></li>
 				
 				
+				
+
+				<?php if($this->session->userdata('logged_in') and $this->session->userdata('admin') == 1): ?>
+					<li><?php echo anchor(base_url('users/list/'),'Users');?></li>
+
+				<?php endif; ?>
+				
+				
 
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
@@ -38,6 +46,8 @@
 				<li><a href="<?php echo base_url(); ?>users/logout">Logout</a></li>
 
 			<?php endif; ?>
+
+
 			</ul>
 		</div>
 	</div>
@@ -75,6 +85,16 @@
 	<?php if($this->session->flashdata('user_loggedout')): ?>
 		<?php echo '<p class="alert alert-success">'.$this->session->flashdata('user_loggedout').'</p>'; ?>
 	<?php endif; ?>
+
+
+	<?php  
+ $connect = mysqli_connect("localhost", "root", "root", "luxurycar");  
+ $query ="SELECT * FROM posts ORDER BY id desc";  
+ $result = mysqli_query($connect, $query); 
+ ?>  
+
+
+
 
 
 

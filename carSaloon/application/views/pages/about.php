@@ -1,8 +1,7 @@
 <h2><?= $title ?></h2>
 <p>This is a Luxury Car Saloon version 1.0</p>
 <p>School: Eszterházy Károly University in Eger</p>
-</header>
-<body>
+
 <style>
 .container {
   position: relative;
