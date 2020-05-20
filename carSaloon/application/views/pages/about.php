@@ -1,8 +1,8 @@
 <h2><?= $title ?></h2>
 <p>This is a Luxury Car Saloon version 1.0</p>
 <p>School: Eszterházy Károly University in Eger</p>
-
-
+</header>
+<body>
 <style>
 .container {
   position: relative;
@@ -43,16 +43,14 @@
   -ms-transform: translate(-50%, -50%);
 }
 </style>
-</head>
-<body>
+
+
 
 <h2>Developer</h2>
 
 <div class="container">
   <img src="assets/images/posts/userprofile.jpg" alt="Avatar" class="image">
   <div class="overlay">
-    <div class="text">Sass-Gyarmati Norbert</div>
+    <div class="text">Sass-Gyarmati Norbert<br>KBROMP</div>
   </div>
 </div>
-
-</body>

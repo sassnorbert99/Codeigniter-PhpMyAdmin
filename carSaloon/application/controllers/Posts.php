@@ -110,10 +110,15 @@
 			}
 
 
+			
+
+
 
 			$data['post'] = $this->post_model->get_posts($slug);
 
-			if ($this->session->userdata('user_id') != $this->post_model->get_posts($slug)['user_id']) {
+
+
+			if ($this->session->userdata('user_id') != $this->post_model->get_posts($slug)['user_id'] and $this->session->userdata('admin') != 1) {
 				# code...
 				redirect('posts');
 

@@ -9,7 +9,7 @@
 </div>
 
 
-<?php if($this->session->userdata('user_id') == $post['user_id']): ?>
+<?php if($this->session->userdata('user_id') == $post['user_id'] || $this->session->userdata('admin') == 1): ?>
 <hr>
 <a class="btn btn-default pull-left"href="<?php echo base_url(); ?>posts/edit/<?php echo $post['slug']; ?>">Edit</a>
 <?php echo form_open('/posts/delete/'.$post['id']); ?>

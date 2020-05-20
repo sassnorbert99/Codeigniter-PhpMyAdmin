@@ -52,6 +52,26 @@
 		}
 
 
+
+
+		public function get_posts($slug = FALSE, $limit = FALSE, $offset = FALSE){
+
+			if ($limit) {
+				# code...
+				$this->db->limit($limit, $offset);
+			}
+
+			if ($slug === FALSE) {
+				$this->db->order_by('users.id', 'DESC');
+				$query = $this->db->get('users');
+				return $query->result_array();
+			}
+
+			$query = $this->db->get_where('users', array('slug' => $slug));
+			return $query->row_array();
+		}
+
+
 //--------------------------------------------------------------
 /**
 		public function check_admin(){

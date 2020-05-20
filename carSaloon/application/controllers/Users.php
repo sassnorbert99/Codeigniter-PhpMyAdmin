@@ -45,12 +45,29 @@
 				// Login user
 				$user_id = $this->user_model->login($username, $password);
 
+				$query = "SELECT admin FROM users WHERE username='$username'";
+               $link = mysqli_connect('localhost','root','root','luxurycar');
+               if (mysqli_connect_errno()) {
+    				printf("Connect failed: %s\n", mysqli_connect_error());
+    			exit();
+				}
+				$result= mysqli_query($link,$query) or die(mysqli_error()); 
+
+    			while($row = mysqli_fetch_assoc($result)){
+        		foreach($row as $cname => $cvalue){
+           		$admin=$cvalue;
+        
+    			}
+   			 }
+
+
 				if($user_id){
 					// Create session
 					$user_data = array(
 						'user_id' => $user_id,
 						'username' => $username,
-						'logged_in' => true
+						'logged_in' => true,
+						'admin' => $admin
 					);
 
 					$this->session->set_userdata($user_data);
@@ -97,6 +114,9 @@
 				return false;
 			}
 		}
+
+
+		
 
 	}
 
