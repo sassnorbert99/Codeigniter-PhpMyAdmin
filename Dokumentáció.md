@@ -445,9 +445,12 @@
     <td><p align="center">Path</p></td>
     <td><p>view/posts/index</p></td>
   </tr>
-  <td><p> Request Body:    
+  <tr>
+    <td><p align="center">Parameters</p></td>
+    <td><p> Request Body:    
        <li> "admin" : tinyint value, that can takes 0: user and 1: superadmin values    </li>
   </p></td>
+  </tr>
   <tr>
     <td><p align="center">Response OK</p></td>
     <td><p>success : 1,	data : results</p></td>
