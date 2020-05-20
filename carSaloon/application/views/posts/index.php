@@ -26,7 +26,9 @@
 
 
 <?php      
-
+        //////////////////////////////
+        if($this->session->userdata('user_id') == $post['user_id'] || $this->session->userdata('admin') == 1){
+            //////////////////////////
 		$id=$this->session->userdata('user_id');
 
          
@@ -56,6 +58,7 @@
 
 
          }
+     }
 
 
          

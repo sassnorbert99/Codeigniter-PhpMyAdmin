@@ -1,3 +1,4 @@
+
 <h2><?php echo $post['title']; ?></h2>
 <small class="post-date">Posted on: <?php echo $post['created_at']; ?></small><br>
 
@@ -10,6 +11,7 @@
 
 
 <?php if($this->session->userdata('user_id') == $post['user_id'] || $this->session->userdata('admin') == 1): ?>
+
 <hr>
 <a class="btn btn-default pull-left"href="<?php echo base_url(); ?>posts/edit/<?php echo $post['slug']; ?>">Edit</a>
 <?php echo form_open('/posts/delete/'.$post['id']); ?>
@@ -51,5 +53,7 @@
 	<input type="hidden" name="slug" value="<?php echo $post['slug']; ?>">
 	<button class="btn btn-primary" type="submit">Submit</button>
 </form>
+
+
 
 
