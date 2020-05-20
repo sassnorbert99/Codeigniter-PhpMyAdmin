@@ -13,6 +13,8 @@ Szerepkörök:
 -mezei felhasználó: regisztrálás során bekerül az adatbázisba, melynek alapból 0-ás admin szintet állít be a rendszer
 (0: mezei felhasználó, 1: szuperadmin)
 -szuperadmin: adatbázisban lehet egy felhasználó admin mezőjét átállítani 1-re, ami jelzi, hogy az adott felhasználó egyben admin is. Az admin szerepköre: Bárkinek a feltöltött posztját tudja szerkeszteni, illetve törölni azokat.
+-jelenlegi adminok a rendszerben: sassnorbert99
+-jelenlegi felhasználók a rendszerben: test1, test2
 
 Importálási lehetőségek:
 -szoftveremben lehet importálni adatokat, melyek a postnál megjelenő import gomb nyomása után látható.
