@@ -1,5 +1,7 @@
+
 <h1><?= $title ?></h1>
 <h2>Welcome to the Luxury Car Saloon Blog Application</h2>
+
 <p>
 	Adatbázis: phpMyAdmin
 <br>
@@ -18,5 +20,3 @@ Készítette:<br>Sass-Gyarmati Norbert<br>KBROMP
 
 
 </p>
-
-

@@ -19,6 +19,10 @@
         <li><a href="<?php echo base_url(); ?>posts">Blog</a></li>
         <li><a href="<?php echo base_url(); ?>categories">Categories</a></li>
         <li><?php echo anchor(base_url('users/list/'),'Users');?></li>
+
+
+        
+        
         
         
         

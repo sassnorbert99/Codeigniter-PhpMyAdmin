@@ -82,6 +82,8 @@
 
 					// Set message
 					$this->session->set_flashdata('user_loggedin', 'You are now logged in');
+					$this->session->set_flashdata('admin', 'You are now logged in as Admin');
+
 
 					redirect('posts');
 				} else {
@@ -102,6 +104,7 @@
 
 			redirect('users/login');
 		}
+		
 
 		public function check_username_exists($username){
 			$this->form_validation->set_message('check_username_exists', 'The username is taken, choose another username!');
@@ -112,6 +115,18 @@
 				return false;
 			}
 		}
+
+
+
+		public function check_admin(){
+			if ($this->user_model->check_admin()) {
+				# code...
+				return true;
+			}else{
+				return false;
+			}
+		}
+
 
 		public function check_email_exists($email){
 			$this->form_validation->set_message('check_email_exists', 'The email is taken, choose another email address!');
@@ -127,6 +142,11 @@
 
     		
     		public function list(){    
+
+    		if (!$this->session->userdata('logged_in')) {
+				# code...
+				redirect('users/login');
+			}
        		$records = $this->User_model->get_list(); 
        		$view_params = 
        		[
