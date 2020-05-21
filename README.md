@@ -20,6 +20,8 @@ Minden mezei felhasználó csak a tulajdonában lévő autókat tudja szerkeszte
 -szoftveremben lehet importálni adatokat, melyek a postnál megjelenő import gomb nyomása után látható.  
 -importálni csak vesszővel elválasztott csv kiterjesztésű fájlokat lehet
 
+## Exportálási lehetőség:
+-szoftveremben lehet exportálni adatokat, melyhez nem kell felhasználónak lenni, hiszen a posztokat is megtekintheti bárki, aki nincs regisztrálva, így statisztikák céljából bárki kiexportálhat adatokat, azonban csak korlátozott adatokhoz férhet hozzá. Ilyenek például egyes luxus termékek neve, id-je, létrehozás dátuma, illetve kategóriája  
 
 ## Készítette:
 Sass-Gyarmati Norbert  
