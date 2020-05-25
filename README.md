@@ -14,7 +14,8 @@ Minden mezei felhasználó csak a tulajdonában lévő autókat tudja szerkeszte
 (0: mezei felhasználó, 1: szuperadmin)  
 -szuperadmin: adatbázisban lehet egy felhasználó admin mezőjét átállítani 1-re, ami jelzi, hogy az adott felhasználó egyben admin is. Az admin szerepköre: Bárkinek a feltöltött posztját tudja szerkeszteni, illetve törölni azokat. A szuperadminok továbbá megtudják nézni, hogy mennyi user található az adatbázisban  
 -jelenlegi adminok a rendszerben: sassnorbert99  
--jelenlegi felhasználók a rendszerben: test1, test2  
+-jelenlegi felhasználók a rendszerben: test1, test2 
+- kódjuk: asdasd
 
 ## Importálási lehetőségek:  
 -szoftveremben lehet importálni adatokat, melyek a postnál megjelenő import gomb nyomása után látható.  
