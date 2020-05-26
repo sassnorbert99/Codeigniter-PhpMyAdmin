@@ -199,7 +199,8 @@ CREATE TABLE `users` (
   `email` varchar(255) NOT NULL,
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `register_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `register_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `admin` tinyint
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
